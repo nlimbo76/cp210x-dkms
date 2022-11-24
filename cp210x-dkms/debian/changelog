@@ -1,0 +1,18 @@
+cp210x-dkms (3.0~nl3) jammy; urgency=low
+
+  * Fix kernel 5.15 compile error
+
+ -- Andy Lee <nlimbo76@gmail.com>  Fri, 24 Oct 2022 17:51:57 +0900
+
+cp210x-dkms (3.0~nl2) focal; urgency=low
+
+  * Add explain text
+
+ -- Andy Lee <nlimbo76@gmail.com>  Fri, 17 Sep 2021 17:51:57 +0900
+
+cp210x-dkms (3.0~nl1) focal; urgency=low
+
+  * Automatically packaged by DKMS.
+
+ -- Andy Lee <nlimbo76@gmail.com>  Fri, 17 Sep 2021 15:12:37 +0900
+

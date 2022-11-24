@@ -1,0 +1,12 @@
+Source: cp210x-dkms
+Section: misc
+Priority: optional
+Maintainer: Andy Lee <nlimbo76@gmail.com>
+Build-Depends: debhelper (>= 7), dkms
+Standards-Version: 3.8.1
+
+Package: cp210x-dkms
+Architecture: all
+Depends: dkms (>= 1.95), ${misc:Depends}
+Description: cp210x driver in DKMS format.
+  fix to using max baudrate to 2M in cp2102
