@@ -6,7 +6,7 @@
 
 DEB_NAME=cp210x
 NAME=cp210x
-VERSION=3.0~nl2
+VERSION=3.0~nl3
 
 configure: configure-stamp
 configure-stamp:
