@@ -1,54 +1,20 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+include /usr/share/dpkg/pkg-info.mk
 
-DEB_NAME=cp210x
-NAME=cp210x
-VERSION=3.0~nl3
+%:
+	dh $@ --with dkms
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	touch configure-stamp
+override_dh_install:
+	dh_install src/* usr/src/cp210x-$(DEB_VERSION_UPSTREAM)/
 
+override_dh_dkms:
+	dh_dkms -V $(DEB_VERSION_UPSTREAM)
 
-build: build-stamp
+override_dh_auto_configure:
+override_dh_auto_build:
+override_dh_auto_test:
+override_dh_auto_install:
+override_dh_auto_clean:
 
-build-stamp: configure-stamp 
-	dh_testdir
-	$(MAKE)
-	touch $@
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
-	-$(MAKE) clean
-	dh_clean
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) DESTDIR=$(CURDIR)/debian/$(DEB_NAME)-dkms NAME=$(NAME) VERSION=$(VERSION) install
-
-binary-arch: build install
-
-binary-indep: build install
-	dh_testdir
-	dh_testroot
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure

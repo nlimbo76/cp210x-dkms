@@ -1,4 +1,4 @@
-cp210x-dkms (3.0~nl3) jammy; urgency=low
+cp210x-dkms (3.0~nl5) jammy; urgency=low
 
   * Fix kernel 5.15 compile error
 
