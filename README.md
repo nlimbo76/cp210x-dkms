@@ -5,4 +5,6 @@ ubuntu DKMS module for modified cp210x driver
 * And, applied dkms build system for automatic build every kernel update
 
 
-original CP210x driver: [https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers]
+> original CP210x driver: [https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers]
+
+> You can download at launchpad ppa:nlimbo76/ppa - cp210x-dkms-3.0~nl6
