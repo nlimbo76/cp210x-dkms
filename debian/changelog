@@ -1,3 +1,9 @@
+cp210x-dkms (3.0~nl6) jammy; urgency=medium
+
+  * Fix for error occured during dkms build.
+
+ -- Andy Lee <nlimbo76@gmail.com>  Thu, 26 Jan 2023 14:50:27 +0900
+
 cp210x-dkms (3.0~nl5) jammy; urgency=low
 
   * Fix kernel 5.15 compile error

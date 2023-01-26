@@ -267,7 +267,7 @@ struct cp210x_port_private {
 static struct usb_serial_driver cp210x_device = {
 	.driver = {
 		.owner =	THIS_MODULE,
-		.name =		"cp210x",
+		.name =		"cp210xN",
 	},
 	.id_table		= id_table,
 	.num_ports		= 1,
@@ -2515,6 +2515,6 @@ module_usb_serial_driver(serial_drivers, id_table);
 
 MODULE_DESCRIPTION(DRIVER_DESC);
 MODULE_LICENSE("GPL v2");
-MODULE_VERSION("3.0-nl0");
+MODULE_VERSION("3.0-nl6");
 
 
