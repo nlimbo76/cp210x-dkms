@@ -12,6 +12,9 @@ WORKDIR=$(shell pwd)/build/
 SOURCES= cp210x.c \
 		 Makefile
 
+export EDITOR=vim
+export DEBEMAIL=nlimbo76@gmail.com
+
 #DKMS_FILES= common.postinst
 
 prepare:
